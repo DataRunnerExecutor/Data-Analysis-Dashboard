@@ -1,0 +1,247 @@
+README FRANCAIS
+
+----- PRÉ-RECQUIS -----
+
+* Microsoft Power BI doit être installé et configuré pour l'affichage correct du Dashboard.
+* Visual Studio Code doit être installé avec une version à jour de Python pour une exécution optimale des scripts. 
+
+
+----- MISSION -----
+
+
+	Identifier la Prochaine Pépite Vidéoludique
+
+Nous sommes une entreprise d’édition de jeux vidéo, Visionary Games, spécialisée dans le développement de titres ambitieux et innovants. Alors que l’industrie du jeu vidéo s’apprête à accueillir l’événement majeur qu’est la sortie de GTA 6, nous voyons cette situation comme une opportunité unique de créer une alternative capable de rivaliser avec ce géant du marché.
+
+Pour cela, nous avons besoin d’une analyse approfondie des données historiques des ventes de jeux vidéo entre 1980 et 2016. Votre mission est d’identifier les caractéristiques clés qui définissent un jeu à succès et de proposer un concept original qui pourrait capter l’attention des joueurs et concurrencer GTA 6.
+Vous aurez comme ressource ce fichier csv : https://raw.githubusercontent.com/ValdisW/datasets/refs/heads/master/video-game-sales.csv
+
+Objectif :
+
+Analyser le fichier CSV fourni contenant les ventes historiques de jeux vidéo afin de :
+
+1. Identifier les tendances et les facteurs de succès des jeux vidéo.
+2. Proposer un concept de jeu vidéo basé sur ces observations pour maximiser les chances de succès.
+
+Livrables :
+
+Un rapport ou une présentation contenant :
+
+1. Une analyse des données (visualisations incluses).
+2. Des réponses claires aux questions posées dans l’objectif.
+3. Des recommandations stratégiques détaillées.
+
+----- UN PEU D'HISTOIRE -----
+
+	Grand Theft Auto, souvent abrégé GTA, est une série de jeux vidéo créée par RockstarGames depuis 1997. La plupart des jeux de la série se déroulent dans une ville fictive américaine comme Liberty City, Vice City, San Andreas ou Los Santos, respectivement modelée à partir des villes et régions américaines de New York, Miami, de la Californie du Sud et Los Angeles. Si le tout premier jeu se déroule dans trois villes fictives éloignées les unes des autres, les titres suivants, qu'ils soient également en 2D ou bien en 3D et HD, se déroulent principalement dans une seule ville ou un seul État (certains opus permettent aux joueurs de visiter d'autres lieux, le temps d'une ou plusieurs missions). Le système de jeu est lancé dans un monde ouvert dans lequel le joueur choisit des missions pour progresser dans le scénario principal, en plus de s'engager dans des activités parallèles, de type action-aventure, conduite, tir en vue à la troisième personne, occasionnellement de rôle, et infiltration. La série est souvent l'objet de polémiques du fait de son contenu adulte et ses thèmes violents. Elle se concentre également sur différents protagonistes, souvent criminels, dont les objectifs divergent selon les jeux.
+À ce jour, la série compte au total seize jeux, dont quatre extensions et un mode en ligne pouvant s'apparenter à des jeux à part entière, auxquelles s'ajoutent différentes compilations ; un dix-septième opus est également en cours de développement. 
+Ce qui a fait le succès de GTA c'est la liberté qu'il offre, son monde ouvert, ses ressemblances avec le monde réel, ses beaux graphismes, son 'humour" et sa controverse. De ce fait, GTA VI est ni plus ni moins que le jeu le plus attendu de la décennie et RSGames restent très discrets quand a sa sortie. C'est un jeu qui sera difficile a concurrencer tant son succès l'a couronné depuis sa sortie.
+
+
+----- RÉALISATION -----
+
+
+	Le Dataset sur lequel nous nous baserons contient des données manquantes qui vont principalement de 1994 a 2016. Ainsi cette analyse ne sera pas a jour et certaines dernières consoles et jeux en seront exclus.
+
+De plus, après avoir échangé avec le client, nous avons convenu que celui-ci voudrait commercialiser un jeu vidéo uniquement sur console de salon. Du fait du développement et de l'abondance des jeux sur smartphone à l'heure où nous parlons, les analyses de consoles portables seront rejetées de notre livrable final. Nous garderons tout de même la plateforme PC considérée comme une console de salon.  
+
+Liste des KPIs :
+1 ) Ventes
+- Quelles sont les consoles les plus vendues ?
+- Quels sont les jeux les plus vendus ?
+- Quelles sont les ventes moyennes par genre ?
+- Quelles sont les ventes moyennes par éditeur ?
+- Quelles sont les ventes moyennes par pays ?
+2) Genres et Plateformes
+- Quel est le nombre total de jeu par genre ?
+- Comment sont répartis les genres par pays ?
+- Comment sont répartis les genres par console ?
+3) Tendances 
+- Comment évoluent les ventes annuelles ?
+- Quels sont les genres populaires par tranches d'années ?
+4) Editeurs 
+- Quels sont les meilleurs éditeurs ?
+- Quelle est la part du marché par éditeur ? Par pays ?
+- Quel est le nombre de jeux publiés par un éditeur et quel est leur succès moyen ?
+5) Recommandations stratégiques 
+- Quels sont les genres dont la popularité augmente dans le temps ?
+- Fournir une liste de jeux ayant le plus marqués le marché
+
+	Pour la période donnée, à l'aide des réponses aux KPIs ci-dessus, nous serons en mesure de proposer à notre client une liste de jeux, de genre, d'éditeurs adaptables sur PS, PS2, PS3, PS4, Xbox, X360, XOne, PC et Wii. 
+
+Pour commencer notre analyse, nous allons étudier les VENTES :
+
+Ainsi, avec plus de 1200 millions de produits vendus, la PS2 est clairement la console la plus vendue, probablement grâce à son large éventail de jeux, sa longévité et sa rétrocompatibilité avec la PS1.
+Avec environ 1000 millions de produits vendus, la Xbox 360 s'est imposée comme l'une des consoles phares grâce à des exclusivités fortes et une expérience en ligne innovante via Xbox Live.
+Avec environ 950 millions de produits vendus, la PS3 bénéficié de la renommée de la marque PlayStation, mais son lancement a été initialement freiné par un prix élevé.
+Avec environ 900 millions de produits vendus, la Wii s'est démarquée par son approche familiale et ses innovations en matière de contrôle de mouvement.
+La PS4 vendue depuis 2014 a plus de 300 millions d'exemplaires n'était pas représentative en 2016 mais le succès était assuré car dans la continuité de la license ; tout comme la XB et la XOne trop récentes tant leurs ventes ont explosées dans les années suivantes. Nous les prondrons tout de même en compte afin de respecter la demande client. De plus, les PC sont un cas similaires car des malgré des ventes comparables à la PS4, leur marge de progrès est linéaire, propose un environnement de jeu également attractif et un riche catalogue en jeux vidéos facilement accessible (Steam) du fait d'une taille de disque dur plus riche que les consoles de salon.
+( Enfin, bien qu'exclue de notre analyse, avec environ 800 millions de ventes, la DS est une console portable très populaire grâce à son double écran et une ludothèque diversifiée. Il en va de même pour les GB, GC, GBA et PSP qui ont marqué des progrès technologiques au début des années 2000 et marqué bien des générations. )
+
+Les ventes massives de Wii Sports (80 millions) sont en grande partie dues au fait qu'il était souvent inclus comme jeu packagé avec la console Wii. Son gameplay accessible et intuitif a permis d'attirer des publics non gamers.
+Super Mario Bros (40 millions) a contribué à populariser les plateformes et à établir Mario comme une icône du jeu vidéo. Il reste un titre emblématique qui a marqué l'industrie.
+Mario Kart Wii (35 millions) a bénéficié de son gameplay multijoueur, de l'accessoire volant fourni avec le jeu et de l'attrait familial de la Wii.
+L'effet "Pokémon" (Pokémon Rouge/Bleu : 30 millions) a capturé l'imagination d'une génération entière, renforcé par les produits dérivés tels que les cartes à collectionner, l'anime et les jouets.
+Un des jeux puzzles les plus célèbres, Tetris (30 millions) a été un précurseur des jeux casuals, parfait pour une expérience portable.
+Avec d'autres jeux tel que New Super Mario Bros., Wii Sports Resort, Wii Play, Duck Hunt, la dominance de Nintendo est claire, avec la Wii et la NES occupant la majorité des places dans le top 10.Ces titres montrent l'importance de la convivialité, de la nostalgie, et des expériences multijoueurs. Ces jeux étaient également souvent vendus avec des consoles, ce qui a boosté leurs ventes et continuer de générer des ventes massives grâce à leur reconnaissance mondiale.
+
+Les jeux de plateforme (Environ 0,9 million par jeu), portés par des franchises comme Super Mario Bros., restent parmi les plus populaires grâce à leur accessibilité et leur attrait intergénérationnel.
+Facteur clé de succès : Gameplay simple, icônes reconnues (Mario, Sonic).
+Les shooters comme Call of Duty et Halo (Environ 0,8 million par jeu) attirent un public massif grâce à leurs expériences multijoueurs immersives.
+Facteur clé de succès : Modes compétitifs en ligne et innovations graphiques.
+Les RPG comme Final Fantasy et The Elder Scrolls (Environ 0,7 million par jeu) sont appréciés pour leurs histoires captivantes et leurs mondes immersifs.
+Facteur clé de succès : Profondeur narrative et personnalisation des personnages.
+Les autres genres comme Racing (Mario Kart), Sports (FIFA), et Fighting (Tekken) enregistrent des ventes moyennes solides, autour de 0,6 million et constituent également des jeux solides durables dans le temps.
+En revanche, les genres comme Puzzle (moins de popularité a part Tetris), Strategy (Jeux souvent complexes, destinés à un public de niche), et Adventure (bien qu'aimé pour la narration, moins performant en termes de ventes) affichent des ventes moyennes inférieures à 0,5 millionqui diminuent dans le temps. Ils attirent un public limité mais fidèle, ce qui explique leurs ventes moyennes inférieures. Le progrès technique rend ces jeux moins attractifs au fur et à mesure tant les graphismes deviennent meilleurs et innovants.
+De nombreux jeux à succès dans les genres de tête appartiennent à des franchises bien établies. 
+
+Palcom (Environ 4 millions par jeu), une division européenne de Konami, est connue pour avoir publié des jeux à fort impact, souvent axés sur des franchises populaires. Son positionnement sur des titres stratégiques a contribué à ce succès.
+Bien que moins connu que d'autres éditeurs, Red Orb (Environ 3 millions par jeu) se concentre sur des jeux de niche qui ont marqué leur public, ce qui explique les fortes ventes moyennes.
+La stratégie de Nintendo (Plus de 2,5 millions par jeu) repose sur des franchises exclusives extrêmement populaires, comme Mario, Zelda et Pokémon. En plus de produire des jeux, Nintendo conçoit également des consoles, créant une intégration verticale qui maximise les ventes.
+Arena Entertainment, UEP Systems, et RedOctane (Guitar Hero) affichent des ventes moyennes proches de 2 millions par jeu ce qui constitue une performance intermédiaire.
+Valve, Hello Games, Sony Computer Entertainment Europe, et Westwood Studios enregistrent des ventes moyennes inférieures à 2 millions par jeu et se situent en bas du classement. 
+Valve : Bien que célèbre pour Steam et des jeux comme Half-Life et Portal, leur volume total de jeux est limité, réduisant les moyennes.
+Hello Games : Un éditeur plus récent connu pour No Man's Sky, mais avec une ludothèque limitée.
+Sony Computer Entertainment Europe : Une branche régionale de Sony, travaillant principalement sur des franchises locales.
+Ainsi, les éditeurs qui se concentrent sur des franchises exclusives ou des genres spécifiques (comme Palcom et Nintendo) affichent des ventes moyennes élevées. Ceux comme Red Orb montrent que le succès n'est pas nécessairement lié au volume, mais à la qualité et à l'impact des titres publiés.
+Les ventes moyennes reflètent souvent la capacité d’un éditeur à maximiser les ventes avec un nombre limité de titres stratégiques.
+
+L'Amérique du Nord est clairement le plus grand marché pour les jeux vidéo (Environ 0,25 million par jeu). Les franchises populaires, telles que Call of Duty, Madden NFL, et GTA, y trouvent un public vaste et fidèle. La culture des consoles et du gaming en ligne a solidifié la domination de cette région. Les franchises à succès sont souvent conçues pour séduire ce public (ex. : FPS, sports, action).
+L'Europe (Environ 0,10 million par jeu) suit l'Amérique du Nord comme deuxième marché le plus important. Les genres de jeux comme les sports (FIFA) et les simulateurs y ont une forte popularité. Cependant, certains genres ou franchises (comme FIFA) y surpassent leur performance nord-américaine.
+Bien que le marché japonais (Environ 0,10 million par jeu) soit plus restreint, il est caractérisé par une forte préférence pour les jeux RPG (ex. : Final Fantasy, Pokémon) et les jeux développés localement. Nintendo et Sony, deux géants japonais, dominent ce marché. Les jeux japonais continuent de s'imposer sur leur territoire, malgré une adoption moindre des genres occidentaux comme les FPS.
+Les autres régions regroupent (Moins de 0,05 million par jeu.) des marchés émergents ou plus petits où les jeux vidéo ne sont pas encore massivement adoptés. Les plateformes mobiles et les jeux à bas coût sont souvent les plus populaires dans ces régions. Ces régions offrent des opportunités aux éditeurs pour pénétrer de nouveaux marchés, surtout via les jeux mobiles. Il est difficile d'en tirer des conclusions car on ne sait pas comment interpréter ces données du fait que l'ont pourrait représenter beaucoup de pays pas uniquement situés sur le même continent.
+
+Nous allons étudier maintenant les GENRES et PLATEFORMES :
+
+Le genre Action (Environ 3 000) domine clairement, étant souvent la catégorie par défaut pour les jeux d'aventure et de combat.
+Il englobe une variété de sous-genres, comme les jeux d'action-aventure (ex. : Uncharted) et les hack-and-slash (ex. : Devil May Cry).
+Les jeux de sports (Environ 2 500), comme FIFA et NBA 2K, bénéficient de sorties annuelles régulières. Le succès de ce genre est soutenu par l'attrait mondial des sports réels.
+La catégorie Misc (Environ 2 000) regroupe des jeux difficiles à classer car très divers, comme des party games ou des expériences uniques (ex. : Wii Sports, Mario Party).
+Les genres comme Role-Playing (RPG), Racing (Course), Shooter (Tir), et Platform (Plateforme) montrent des chiffres significatifs, avec environ 1 500 à 2 000 jeux publiés. 
+Role-Playing : Les RPG attirent un public fidèle grâce à leur profondeur narrative (ex. : Final Fantasy, The Elder Scrolls). 
+Racing : Les jeux de course, comme Mario Kart et Gran Turismo, sont très populaires pour leur accessibilité.
+Shooter : Les FPS (ex. : Call of Duty, Halo) dominent ce genre grâce à leur popularité en ligne.
+Platform : Traditionnellement lié à des franchises emblématiques comme Super Mario.
+Les genres sont en bas du classement car ils comptent moins de jeux publiés, avec des chiffres allant de 500 à 1 000.
+Simulation : Bien que populaire dans des niches (ex. : The Sims, Flight Simulator), ce genre a une production limitée.
+Fighting : Les jeux de combat comme Street Fighter et Mortal Kombat attirent une base de fans dédiée mais restent limités en volume.
+Puzzle : Moins de jeux sont publiés dans ce genre, bien qu'il ait des succès massifs comme Tetris.
+Action, Sports, et Divers couvrent une large gamme de préférences des joueurs.
+Ainsi, de nombreux genres dans le Top 5, comme Sports et Racing, bénéficient de sorties annuelles régulières qui gonflent le nombre total.
+Les genres comme Simulation et Puzzle montrent une production limitée mais peuvent avoir un impact significatif grâce à des titres phares.
+
+Aux Etats-Unis, le genre dominant est Action. Les genres comme Shooter et Sports suivent en termes de popularité. Les jeux d’action et de tir, tels que Call of Duty et GTA, sont très populaires en Amérique du Nord, reflétant une forte adoption des genres compétitifs et multijoueurs. Les jeux de sports, avec des franchises annuelles comme Madden NFL, trouvent également une base de fans solide.
+En Europe, le genre dominant est aussi Action. Les genres Sports et Shooter sont également bien représentés. Les jeux de sports dominent en raison de l’attrait pour des franchises comme FIFA. Les genres comme Role-Playing ont aussi une certaine popularité grâce à des séries bien établies telles que The Witcher.
+Au Japon, le genre dominant : Role-Playing (RPG). Les genres Platform et Misc suivent en termes de popularité. Le Japon montre une préférence marquée pour les RPG et les jeux de plateformes, portés par des franchises emblématiques comme Pokémon, Final Fantasy, et Mario. Les jeux de tir (Shooter) sont beaucoup moins populaires dans cette région.
+Les genres dominants dans les autres régions sont : Action, Sports et Shooter. Les marchés émergents adoptent des genres similaires à ceux populaires en Amérique du Nord et en Europe. Cela reflète l'influence globale des franchises occidentales sur le reste du monde.
+Le genre Action domine mondialement. Cela inclut des franchises universellement appréciées comme GTA et The Legend of Zelda. Le Japon se distingue avec une préférence pour les RPG et les jeux de plateforme. C'est une différence culturelle. L’Amérique du Nord et l’Europe préfèrent les genres compétitifs comme Shooter et Sports. Les genres qui dominent en Amérique du Nord et en Europe peuvent encore mieux pénétrer les marchés émergents. Il y a un potentiel de croissance dans les autres régions du monde.
+
+La PS2 domine avec le plus grand nombre total de jeux, couvrant presque tous les genres (Action, RPG, Sports, etc.)La longévité de la PS2, combinée à sa popularité mondiale, a permis une variété impressionnante de jeux. Les genres populaires comme Action et Sports sont particulièrement bien représentés.
+La PS3 et les Xbox étaient axées sur des expériences immersives, ce qui explique leur forte présence dans les genres compétitifs. Ces consoles montrent une répartition équilibrée des genres, avec une domination des genres Action, Shooter et Sports. 
+La Wii est fortement représentée dans les genres Sports et Misc (ex. : Wii Sports, Mario Party). Cela reflète l'attrait de la Wii pour les familles et les joueurs occasionnels.
+Le PC est équilibré mais montre une prédominance dans les genres Simulation et Strategy.
+Le PC est connu pour ses jeux de stratégie en temps réel et ses simulateurs (ex. : The Sims, StarCraft).
+Les genres ( Action, Role-Playing, Sports, s'adaptent bien aux consoles portables grâce à leur gameplay accessible et leurs courtes sessions de jeu grace aux réguliers 'checkpoints' offerts par les jeux.
+
+Après ces analyses il est temps de faire un point TENDANCES temporelles et mode :
+
+Les ventes augmentent progressivement entre 1980 et les années 1990, avec une forte accélération à partir des années 2000. L'essor des consoles populaires comme la PlayStation, la Xbox, et la Wii ainsi que les progrès technologiques, notamment dans les graphismes et les performances des consoles et le développement des franchises à succès (ex. : Pokémon, Grand Theft Auto, Call of Duty).
+Le pic absolu est atteint autour de 2008-2010. L'émergence des jeux en ligne multijoueurs et des plateformes numériquescomme La Wii, la PS3 et la Xbox 360 dominent le marché pendant cette période.
+Une baisse significative des ventes est observée après 2010. Il y a une transition des joueurs vers les plateformes mobiles et les jeux numériques, moins comptabilisés dans ces données. On observe une saturation du marché des consoles traditionnelles.
+Dans les années 1980 - 1990, les genres étaient simples (Plateform, Puzzle), adaptés aux capacités limitées des consoles de l'époque.
+Dans les années 1990 - 2000, l'apparition des genres Role-Playing (RPG) (ex. : Final Fantasy) et Shooter (ex. : Doom)et le développement de consoles comme la SNES et la PlayStation 1 introduisent des jeux narratifs et des graphismes 3D.
+L'Age d'or surgit dans les années 2000-2010 avec les genres Action, Shooter et Sports. L'avènement des franchises modernes (ex. : Call of Duty, FIFA, GTA) et les jeux multijoueurs en ligne deviennent populaires avec les consoles comme la Xbox 360 et la PS3.
+La transition numérique intervient dans les années 2010 - 2020 avec les genres Shooter, Sports, et Racing qui restent dominants. Mais on observe une diminution des ventes globales. La montée en puissance des plateformes numériques et mobiles transforme l'industrie.
+Chaque pic de ventes correspond à des avancées technologiques ou des innovations dans les consoles et les jeux. Les genres Action, Sports, et Shooter dominent toutes les époques, montrant leur universalité auprès des joueurs. Les données montrent un déclin des ventes physiques depuis 2010, reflétant l'évolution du marché vers les jeux numériques et les abonnements. 
+Les éditeurs doivent maintenant se focaliser sur l'avenir comme : 
+Établir des stratégies pour capturer le marché numérique émergent, notamment via des services comme les abonnements (Game Pass)
+Consolider les genres Shooters et Action, tout en explorant les RPG et Simulations, qui montrent un attrait croissant pour investir dans les genres populaires.
+Explorer les nouvelles plateformes avec des jeux mobiles et les expériences cross-platform (console et PC) qui représentent un fort potentiel.
+
+Etudions un peu les EDITEURS :
+
+Nintendo (Plus de 1 750 millions) est le leader incontesté du marché, grâce à ses consoles emblématiques (Wii, DS, Switch) et ses franchises exclusives comme Mario, Zelda, et Pokémon. Leur stratégie repose sur des exclusivités fortes, des innovations (motion gaming avec la Wii), et une accessibilité intergénérationnelle.
+EA (Environ 1 100 millions) domine avec des franchises sportives annuelles comme FIFA et Madden NFL, qui génèrent des revenus stables.
+Ils ont également des titres à succès comme The Sims et Battlefield, diversifiant leur portefeuille.
+Activision (Environ 900 millions) s'appuie principalement sur des franchises populaires comme Call of Duty et World of Warcraft (via Blizzard).
+En tant que créateur de la PlayStation, Sony (Environ 750 millions) tire parti de nombreuses exclusivités comme The Last of Us et God of War.
+Ubisoft (Environ 700 millions) est connu pour ses franchises ouvertes comme Assassin's Creed, Far Cry, et Just Dance.
+Leur stratégie est centrée sur des titres cross-platform et des expériences massives.
+Leur approche axée sur des expériences immersives et narratives est un facteur clé de succès.
+Leur expertise dans les jeux multijoueurs et en ligne a renforcé leur position.
+Take-Two (Environ 600 millions) est le créateur de GTA, une des franchises les plus lucratives de l'histoire.
+Ils exploitent également d'autres franchises comme NBA 2K et Red Dead Redemption.
+D'autres éditeurs comme THQ, Konami Digital Entertainment, Sega, et Namco Bandai Games, bien qu'importants, ont des portefeuilles plus modestes en comparaison. Ils s'appuient sur des franchises spécifiques, comme Metal Gear (Konami) ou Sonic (Sega), pour maintenir leur présence.
+
+Comparons les différents éditeurs :
+Nintendo domine le marché mondial, avec une forte présence dans toutes les régions : NA_Sales : 18.85 (millions). EU_Sales : 17.38(millions). JP_Sales : 35.43 (millions) — marché clé pour Nintendo grâce à ses franchises japonaises comme Pokémon et Zelda. Other_Sales : 12.06 (millions). Nintendo est l'éditeur le plus performant puisque le nombre modéré de jeux publiés associé à un succès moyen élevé montre l'impact de ses franchises fortes.
+Electronic Arts (EA) est un concurrent global solide : EA bénéficie de son portefeuille diversifié, avec une forte présence en Amérique du Nord et en Europe, où les franchises sportives comme FIFA dominent. Electronic Arts montre l'efficacité des sorties annuelles ;
+le grand nombre de jeux publiés explique un succès moyen légèrement inférieur, mais il reste un acteur clé grâce à des franchises récurrentes.
+Other_Sales montre également des chiffres significatifs, probablement grâce aux jeux accessibles mondialement.
+Activision a une présence forte mais moins diversifiée ; Activision performe principalement en Amérique du Nord et en Europe, avec des ventes plus modestes au Japon.
+Sony Computer Entertainment est plus équilibré : Une présence notable dans toutes les régions, bien qu'elle soit légèrement plus faible que Nintendo et EA.
+Ubisoft montre des chiffres solides en Amérique du Nord et en Europe : Ubisoft est bien positionné grâce à des franchises populaires comme Assassin’s Creed et Far Cry. Sony et Ubisoft équilibrent diversité et performance bien qu'ils publient plus de jeux, leur succès moyen est légèrement inférieur à Nintendo.
+Ainsi, Nintendo et EA peuvent capitaliser sur leurs franchises populaires pour continuer à dominer. Activision et Ubisoft pourraient explorer davantage le marché japonais avec des titres adaptés à ce public.
+"Other_Sales" représente un potentiel de croissance pour tous les éditeurs.
+
+Il nous faut maintenant réfléchir aux RECOMMANDATIONS STRATÉGIQUES que nous allons pouvoir apporter :
+
+Le genre Action connaît une croissance exponentielle depuis les années 2000 et atteint son apogée autour de 2010. Il reste un genre incontournable grâce à des franchises incontournables (GTA, Assassin's Creed)
+Le genre Shooter connait une forte croissance est observée à partir de 2005, avec des franchises telles que Call of Duty et Halo qui boostent ce genre. Il est devenu un pilier des jeux compétitifs et multijoueurs.
+Le genre Sports a maintenu une progression régulière grâce à des franchises annuelles comme FIFA et NBA 2K. La Wii a également contribué à la croissance du genre avec des titres comme Wii Sports.
+Le genre Role-Playing connait une popularité croissante, en particulier grâce à des séries japonaises comme Pokémon et Final Fantasy, mais aussi des RPG occidentaux comme The Elder Scrolls.
+Enfin Racing, un genre qui connaît une croissance continue grâce à des jeux emblématiques comme Mario Kart et Gran Turismo.
+Les genres Action, Shooter, et Sports sont les principaux moteurs du marché. Les genres comme Puzzle et Strategy montrent des performances plus modestes mais stables.
+
+Nous allons pouvoir fournir la liste des jeux qui ont connu les meilleures ventes ; un top 5 des meilleurs jeux par console puis le nomb re total de ventes en millions :
+
+PS	Gran Turismo	10.95
+	Final Fantasy VII	9.72
+	Gran Turismo 2	9.49
+	Final Fantasy VIII	7.86
+	Crash Bandicoot 2: Cortex Strikes Back	7.58
+	Grand Theft Auto: San Andreas	20.81
+	Grand Theft Auto: Vice City	16.15
+	Gran Turismo 3: A-Spec	14.98
+	Grand Theft Auto III	13.10
+	Gran Turismo 4	11.66
+PS3     Grand Theft Auto V	21.40
+	Call of Duty: Black Ops II	14.03
+	Call of Duty: Modern Warfare 3	13.46
+	Call of Duty: Black Ops	12.73
+	Gran Turismo 5	10.77
+PC	The Sims 3	8.11
+        World of Warcraft	6.28
+	Diablo III	5.20
+	Microsoft Flight Simulator	5.12
+	StarCraft II: Wings of Liberty	4.83
+Wii	Wii Sports	82.74
+	Mario Kart Wii	35.82
+	Wii Sports Resort	33.00
+	Wii Play	29.02
+	New Super Mario Bros. Wii	28.62
+XB	Halo 2	8.49
+	Halo: Combat Evolved	6.43
+	Tom Clancy's Splinter Cell	3.02
+	The Elder Scrolls III: Morrowind	2.86
+	Fable	2.66
+X360	Kinect Adventures!	21.82
+	Grand Theft Auto V	16.38
+	Call of Duty: Modern Warfare 3	14.76
+	Call of Duty: Black Ops	14.64
+	Call of Duty: Black Ops II	13.73
+
+A présent, riche de toutes ces informations, nous avons établit un tableau de bord sur Power BI en fichier annexe qui résume nos KPI(s) et met en lumière nos analyses. 
+Celui ci présentera les meilleurs éditeurs par console ainsi que leur part représentatives ; les meilleurs jeux vendus par année en interface interactive ; l'évolution des ventes par genre et par année ; enfin il proposera une répartition par année et genre.
+
+----- CONCLUSION -----
+
+Pour conclure, il ne sera pas facile de concurrencer GTA VI tant ce jeu est attendu, dans l'ère du temps et qu'il jouit déjà d'une immense  notoriété avec les différents volets dont le dernier date de 2013. 
+La campagne marketing et de publicité réalisée par RSG est monstrueuse et inimitable.
+Pour Visionnary Games, il faudrait recruter une équipe de développeurs avec des skills complémentaires ! 
+Cependant certaines caractéristiques retenues nous permettrait d'y voir plus clair afin de sortir un jeu pouvant potentiellement concurrencer GTA VI :
+Adopter un modèle en monde ouvert : Inspiré de GTA, créer un jeu en monde ouvert avec une narration immersive et une forte emphase sur l'exploration et l'interaction. Proposer des innovations dans le gameplay, comme une personnalisation avancée des personnages, des choix influençant l’histoire, et une simulation réaliste du monde.
+Focalisation sur le genre Action/Adventure : Ces genres dominent le marché et attirent une audience universelle. Intégrer des éléments de Shooter ou Role-Playing pour diversifier l'expérience.
+Différenciation : Inclure des thèmes uniques, comme une thématique futuriste, post-apocalyptique, ou basée sur une culture non exploitée (ex. mythologie asiatique, Amérique latine). Offrir un multijoueur en temps réel intégré à une expérience solo riche.
+Plateformes cibles : Prioriser les plateformes performantes comme PS5, Xbox Series X, et PC. Prévoir un portage optimisé sur Nintendo Switch pour capter une audience casual.
+Lancer une campagne marketing agressive, dynamique et efficace en soulignant les différences avec GTA VI. Proposer une bêta ouverte pour engager les joueurs et susciter l'intérêt avant la sortie officielle.
